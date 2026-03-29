@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book - Project Sura</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const faders = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(el => observer.observe(el));
+});
+</script>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <img src="images/sura_logo.png" alt="Project Sura Logo">
+    <a href="index.html" style="text-decoration:none ; color:#1f2933">Project Sura</a>
+  </div>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="sessions.html">Sessions</a>
+    <a href="contact.html">Contact</a>
+    <a href="book.html">Book</a>
+  </nav>
+</header>
+
+<!-- WHAT TO EXPECT -->
+<section class="about-content fade-in">
+  <div class="container">
+    <h2>What Our Sessions Look Like</h2>
+
+    <div class="why-grid">
+
+      <div class="card">
+        <h3>Duration</h3>
+        <p>Our sessions are typically around <strong>40 minutes</strong>, designed to be concise yet impactful.</p>
+      </div>
+
+      <div class="card">
+        <h3>Different modes</h3>
+        <p>
+          We conduct both online and offline sessions,
+          including webinars and workshops.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Audience</h3>
+        <p>
+          We tailor the topic to the age group — from middle
+          schoolers to employees to senior citizens.
+        </p>
+      </div>
+      <div class="card">
+        <h3>What We Cover</h3>
+        <p>
+          Introduction to AI, data training, types of AI, its history,
+          and real-world applications across fields.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Specific Focus</h3>
+        <p>
+          Usually centered around <strong>prompt engineering</strong>, but we tailor
+          sessions based on your audience and requirements.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Interactive Activities</h3>
+        <p>
+          Hands-on exercises to explore AI systems, datasets,
+          and decision-making processes.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Impact Discussions</h3>
+        <p>
+          Environmental, ethical, and mental impacts of AI —
+          and how it affects your specific field.
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- BOOK FORM -->
+<section class="about-content light-section fade-in">
+  <div class="container">
+
+    <h2>Book a Session</h2>
+
+    <div class="contact-form-card card-base">
+
+      <form action="https://formsubmit.co/projectsura1@gmail.com" method="POST" class="contact-form">
+
+        <input type="text" name="organisation" placeholder="Organisation Name" required>
+
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <input type="text" name="audience" placeholder="Age Group / Target Audience" required>
+
+        <textarea rows="3" name = "topics" placeholder="Any specific AI topics? (Default: Prompt Engineering)" ></textarea>
+
+        <input type="date" name="preferred_date" required>
+
+        <textarea rows="4" name = "additional" placeholder="Any additional details (number of participants, mode, expectations, etc.)" ></textarea>
+
+        <button type="submit">Submit Request</button>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

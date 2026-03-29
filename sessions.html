@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sessions - Project Sura</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const faders = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(el => observer.observe(el));
+});
+</script>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+  <div class="logo">
+    <img src="images/sura_logo.png" alt="Project Sura Logo">
+    <a href="index.html" style="text-decoration:none ; color:#1f2933">Project Sura</a>
+  </div>
+  <nav>
+      <a href="about.html">About</a>
+      <a href="sessions.html">Sessions</a>
+      <a href="contact.html">Contact</a>
+      <a href="book.html">Book</a>
+  </nav>
+</header>
+
+<!-- SESSIONS WE'VE CONDUCTED -->
+
+<section class="about-content light-section fade-in">
+  <div class="container">
+
+
+<h2>Sessions Conducted</h2>
+
+<div class="sessions-wrapper">
+  <!-- SESSION 3 -->
+  <div class="session">
+    <div class="session-img">
+      <img src="images/sessions/rvdental.jpeg" alt="Women and Dental AI">
+    </div>
+
+    <div class="session-info">
+      <div class="session-meta">11 March 2026 </div>
+      <h3>R V Dental College</h3>
+      <p>
+        We were guest speakers on their women's day celebration.
+        Our session focused on women's role in AI, gender bias, and
+        the future of medicine in AI.
+      </p>
+    </div>
+  </div>
+
+    <!-- SESSION 2 -->
+    <div class="session reverse">
+      <div class="session-img">
+        <img src="images/sessions/cafirm.jpg" alt="CA online AI">
+      </div>
+
+      <div class="session-info">
+        <div class="session-meta">13 March 2026</div>
+        <h3>Vishranth & Karthik</h3>
+        <p>
+          We held our first online session for V&K, a Chartered
+          Accountants firm. We discussed the involvment of AI
+          in finance as well as document preparation.
+        </p>
+      </div>
+    </div>
+  <!-- SESSION 1 -->
+  <div class="session">
+    <div class="session-img">
+      <img src="images/sessions/npshsr_56.jpeg" alt="AI Literacy Session">
+    </div>
+
+    <div class="session-info">
+      <div class="session-meta">20 January 2026 </div>
+      <h3>NPS HSR </h3>
+      <p>
+        We conducted our first session for grades 5 and 6 on
+        basic prompt engineering. It was an engaing and
+        interactive session.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- SESSION 2 -->
+  <div class="session reverse">
+    <div class="session-img">
+      <img src="images/sessions/npshsr_78.jpeg" alt="AI Literacy Session">
+    </div>
+
+    <div class="session-info">
+      <div class="session-meta">3 February 2026</div>
+      <h3>NPS HSR</h3>
+      <p>
+        We had a session for grades 7 and 8 in NPS HSR. We explored
+        generative AI and prompt engineering in detail. We received
+        extremely positive feedback.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
+  </div>
+</section>
+<!-- CTA SECTION -->
+
+<section class="cta fade-in">
+  <h2>Interested?</h2>
+  <br>
+  <p>
+    <a href="book.html" style="text-decoration:none;" class="cta-btn">Book a session</a>
+  </p>
+</section>
+</body>
+</html>

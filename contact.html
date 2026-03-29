@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Project Sura</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const faders = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(el => observer.observe(el));
+});
+</script>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+  <div class="logo">
+    <img src="images/sura_logo.png" href="index.html" alt="Project Sura Logo">
+    <span href="index.html">Project Sura</span>
+
+  </div>
+  <nav>
+      <a href="about.html">About</a>
+      <a href="sessions.html">Sessions</a>
+      <a href="contact.html">Contact</a>
+      <a href="book.html">Book</a>
+  </nav>
+</header>
+
+<!-- CONTACT INFO -->
+
+<section class="about-content fade-in">
+  <div class="container">
+
+
+<h2>Get in Touch</h2>
+
+
+<div class="sessions-grid">
+
+  <div class="session-feature">
+    <h3>Email</h3>
+    <p>
+      <a style="color:#555555;"  href="mailto:projectsura1@gmail.com">
+        projectsura1@gmail.com
+      </a>
+    </p>
+  </div>
+
+
+  <div class="session-feature">
+    <h3>Instagram</h3>
+    <p>
+      <a style="color:#555555;"  href="https://instagram.com/projectsura_" target="_blank">
+        @projectsura_
+      </a>
+    </p>
+  </div>
+
+</div>
+<br>
+<br>
+<div class="session-feature">
+  <h3>Send a message</h3>
+  <p>
+  <form class="contact-form" action="https://formsubmit.co/aab0decbe30f1c3da13057ed35c03e01" method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea rows="5" name = "message" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+  </p>
+</div>
+
+  </div>
+</section>
+
+</section>
+
+</body>
+</html>

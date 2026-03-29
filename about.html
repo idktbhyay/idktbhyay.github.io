@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - Project Sura</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const faders = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(el => observer.observe(el));
+});
+</script>
+<body>
+
+  <!-- HERO -->
+<header class="navbar">
+  <div class="logo">
+    <img src="images/sura_logo.png" alt="Project Sura Logo">
+    <a href="index.html" style="text-decoration:none ; color:#1f2933">Project Sura</a>
+  </div>
+  <nav>
+      <a href="about.html">About</a>
+      <a href="sessions.html">Sessions</a>
+      <a href="contact.html">Contact</a>
+      <a href="book.html">Book</a>
+  </nav>
+</header>
+
+  <!-- INTRO -->
+  <section class="about-content fade-in">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>
+        Project Sura is a youth-led AI literacy organisation dedicated to promoting
+        effective and ethical use of artificial intelligence. We conduct sessions
+        both online and offline to help understand what role AI plays in your field.
+      </p>
+      <p>
+        Our goal is to make AI understandable, practical, and accessible
+        while navigating a rapidly evolving digital world.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+
+
+  <!-- CO-FOUNDERS -->
+  <section class="about-content fade-in">
+    <div class="container">
+      <h2>Meet the Founders</h2>
+      <div class="founders-wrapper">
+
+  <div class="founder">
+    <div class="founder-img">
+      <img src="images/team/ira_pic.jpeg" alt="Founder">
+    </div>
+    <div class="founder-info">
+      <h3>Ira Agarwal</h3>
+      <p class="role">Co-Founder</p>
+      <p>
+        Hi! 
+      </p>
+    </div>
+  </div>
+
+  <div class="founder reverse">
+    <div class="founder-img">
+      <img src="images/team/suhani_pic.jpeg" alt="Founder">
+    </div>
+    <div class="founder-info">
+      <h3>Suhani Bhuwania</h3>
+      <p class="role">Co-Founder</p>
+      <p>
+        no1 lekshmi fan!
+      </p>
+    </div>
+  </div>
+
+</div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="about-content light-section fade-in">
+    <div class="container">
+      <h2>Meet the Team</h2>
+
+      <div class="team-grid">
+        <div class="team-card"><img src="images/team/aarav_pic.jpeg"><h3>Aarav J.</h3><p>PR Head</p></div>
+        <div class="team-card"><img src="images/team/dasmat_pic.jpeg"><h3>Dasmat A.</h3><p>HR Head</p></div>
+        <div class="team-card"><img src="images/team/gaurav_pic.jpeg"><h3>Gaurav S.</h3><p>Creative Director</p></div>
+        <div class="team-card"><img src="images/team/snehin_pic.jpeg"><h3>Snehin B.</h3><p>Markering Head</p></div>
+        <div class="team-card"><img src="images/team/sharvari_pic.jpeg"><h3>Sharvari Z.</h3><p>Social Media Head</p></div>
+        <div class="team-card"><img src="images/team/ridah_pic.jpeg"><h3>Ridah F.</h3><p>Social Media Head</p></div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
