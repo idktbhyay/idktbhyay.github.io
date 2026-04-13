@@ -1,33 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About - Project Sura</title>
+  <title>Project Sura</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const faders = document.querySelectorAll('.fade-in');
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
 
-  faders.forEach(el => observer.observe(el));
-});
-</script>
 <body>
 
-  <!-- HERO -->
+<!-- NAVBAR -->
+
 <header class="navbar">
   <div class="logo">
     <img src="images/sura_logo.png" alt="Project Sura Logo">
     <a href="index.html" style="text-decoration:none ; color:#1f2933">Project Sura</a>
+
   </div>
   <nav>
       <a href="about.html">About</a>
@@ -37,78 +26,116 @@ document.addEventListener("DOMContentLoaded", function () {
   </nav>
 </header>
 
-  <!-- INTRO -->
-  <section class="about-content fade-in">
-    <div class="container">
-      <h2>Our Mission</h2>
-      <p>
-        Project Sura is a youth-led AI literacy organisation dedicated to promoting
-        effective and ethical use of artificial intelligence. We conduct sessions
-        both online and offline to help understand what role AI plays in your field.
-      </p>
-      <p>
-        Our goal is to make AI understandable, practical, and accessible
-        while navigating a rapidly evolving digital world.
-      </p>
+<section class="hero">
+  <div class="hero-inner" >
+    <p class="tag">Ethical & Effective use of AI</p>
+
+    <h1 class="main-title">Project Sura</h1>
+
+    <br>
+
+    <p class="subtitle">
+      Youth led organisation that hosts AI literacy sessions online and offline,
+      helping you understand bias, hallucination, and ethical AI use with ease.
+    </p>
     </div>
-  </section>
+</section>
+<section class="counter-box">
+  <div class="counter-card">
+    <div class="counter-number">5</div>
+    <div class="counter-label">Sessions</div>
+  </div>
 
-  <!-- WHY US -->
+  <div class="counter-card">
+    <div class="counter-number">600+</div>
+    <div class="counter-label">Participants</div>
+  </div>
+</section>
 
+<section class="updates">
+  <h2 class="updates-heading">Updates</h2>
 
-  <!-- CO-FOUNDERS -->
-  <section class="about-content fade-in">
-    <div class="container">
-      <h2>Meet the Founders</h2>
-      <div class="founders-wrapper">
-
-  <div class="founder">
-    <div class="founder-img">
-      <img src="images/team/ira_pic.jpeg" alt="Founder">
+  <div class="update-card highlight">
+    <div class="update-content">
+      <p class="update-text">
+        Webinar info out!<br>
+        Limited seats, go register now on https://shorturl.at/3jbtV
+      </p>
+      <a href="images/webinar.jpg" target="_blank">View Brochure →</a>
     </div>
-    <div class="founder-info">
-      <h3>Ira Agarwal</h3>
-      <p class="role">Co-Founder</p>
-      <p>
-        Hi! I'm a senior in NPS HSR passionate about
-        AI, computers, and research
+    <img src="images/webinar.jpg" class="update-img">
+  </div>
+
+  <div class="update-card">
+    <div class="update-content">
+      <p class="update-text">
+        Letters of Recommendation uploaded!<br>Go check them out
       </p>
     </div>
   </div>
 
-  <div class="founder reverse">
-    <div class="founder-img">
-      <img src="images/team/suhani_pic.jpeg" alt="Founder">
-    </div>
-    <div class="founder-info">
-      <h3>Suhani Bhuwania</h3>
-      <p class="role">Co-Founder</p>
-      <p>
-        Hey, I'm a senior in NPS HSR interested
-        in law, technology, and helping people.
+  <div class="update-card">
+    <div class="update-content">
+      <p class="update-text">
+        Want something productive to do this summer?<br><br>Now, hosting workshops in apartments for all age groups.
       </p>
     </div>
   </div>
 
-</div>
+  <!-- for image
+  <div class="update-card">
+    <div class="update-content">
+      <p class="update-text">
+        Webinar info coming out soon! Stay tuned...
+      </p>
     </div>
-  </section>
+    <img src="images/workshop.jpg" class="update-img">
+  </div>
+</section>-->
 
-  <!-- TEAM -->
-  <section class="about-content light-section fade-in">
-    <div class="container">
-      <h2>Meet the Team</h2>
+ <!--for highlight
+  <div class="update-card highlight">
+    <div class="update-content">
+      <p class="update-text">
+        Webinar info coming out soon! Stay tuned...
+      </p>
+    </div>
+    <img src="images/workshop.jpg" class="update-img">
+  </div>
+</section>-->
 
-      <div class="team-grid">
-        <div class="team-card"><img src="images/team/aarav_pic.jpeg"><h3>Aarav J.</h3><p>PR Head</p></div>
-        <div class="team-card"><img src="images/team/dasmat_pic.jpeg"><h3>Dasmat A.</h3><p>HR Head</p></div>
-        <div class="team-card"><img src="images/team/gaurav_pic.jpeg"><h3>Gaurav S.</h3><p>Creative Director</p></div>
-        <div class="team-card"><img src="images/team/snehin_pic.jpeg"><h3>Snehin B.</h3><p>Marketing Head</p></div>
-        <div class="team-card"><img src="images/team/sharvari_pic.jpeg"><h3>Sharvari Z.</h3><p>Social Media Head</p></div>
-        <div class="team-card"><img src="images/team/ridah_pic.jpeg"><h3>Ridah F.</h3><p>Social Media Head</p></div>
+<!-- LORs / TESTIMONIALS -->
+<section class="lors-section">
+  <div class="container">
+    <h2>Letters of Recommendation</h2>
+
+    <div class="lors-wrapper">
+
+      <div class="lor-item">
+        <div class="lor-preview">
+          <img src="images/lor/rv_dental.jpeg" alt="RV Dental College LOR">
+        </div>
+        <div class="lor-content">
+          <h3>RV Dental College</h3>
+          <p class="lor-meta">Guest Lecture • Women in AI</p>
+          <a href="images/lor/rv_dental.jpeg" target="_blank">View Letter →</a>
+        </div>
       </div>
+
+      <div class="lor-item">
+        <div class="lor-preview">
+          <img src="images/lor/karunya.jpeg" alt="CA Firm LOR">
+        </div>
+        <div class="lor-content">
+          <h3>Karunya & Co.</h3>
+          <p class="lor-meta">Online Session • AI in Finance • CA Firm</p>
+          <a href="images/lors/karunya.jpeg" target="_blank">View Letter →</a>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 </body>
 </html>
